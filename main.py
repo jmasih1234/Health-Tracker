@@ -1,4 +1,4 @@
-from nutritionPlanner import ( nutriton_health, calculate_macros)
+from nutritionPlanner import (nutrition_health, calculate_macros)
 
 
 health_conditions = ['Anorexia', 'Diabetes', 'Obesity', 'Heart Disease', 'Cancer', 'Arthritis']

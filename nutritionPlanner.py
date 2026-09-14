@@ -1,5 +1,3 @@
-from nutritionPlanner import nutrition_health, calculate_macros
-
 def nutrition_health(age, weight, gender, height, activity, user_conditions, goals):
   
   if gender == "male":
@@ -18,11 +16,14 @@ def nutrition_health(age, weight, gender, height, activity, user_conditions, goa
   if activity.lower() == "extra active":
     maintenace_Cal = bmr * 1.94
     
-  if goals.lower() == "bulk":
+  if goals.lower() == "bulking":
     intake_cal = maintenace_Cal + 500
-  if goals.lower() == "cut":
+  elif goals.lower() == "cutting":
     intake_cal = maintenace_Cal - 500
-
+  elif goals.lower() == "maintaining":
+    intake_cal = maintenace_Cal
+  else:
+    intake_cal = maintenace_Cal
     
   return maintenace_Cal, intake_cal
 
